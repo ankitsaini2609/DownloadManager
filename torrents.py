@@ -19,10 +19,10 @@ def getLinks(search):
 	    list_link.append(row.get('href'))
 
 	lists = filter(lambda x:x.startswith('/torrent/'), list_link)
-	fd = open('links.txt', 'w')
 	links=[]
 	for row in lists:
-		s = 'https://piratebay.red'+row
-		fd.write(s+'\n')
-		links.append(s)
+		links.append('https://piratebay.red'+row)
+		row
+
+	links = links[::2]
 	return links
